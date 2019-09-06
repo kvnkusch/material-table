@@ -59,6 +59,7 @@ export const propTypes = {
     EditField: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent]),
     EditRow: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent]),
     FilterRow: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent]),
+    Footer: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent]),
     Groupbar: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent]),
     GroupRow: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent]),
     Header: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent]),
@@ -68,6 +69,7 @@ export const propTypes = {
     Toolbar: PropTypes.oneOfType([PropTypes.element, PropTypes.func, StyledComponent])
   }),
   data: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.object), PropTypes.func]).isRequired,
+  footerData: PropTypes.object,
   editable: PropTypes.shape({
     onRowAdd: PropTypes.func,
     onRowUpdate: PropTypes.func,
@@ -138,6 +140,7 @@ export const propTypes = {
     pageSizeOptions: PropTypes.arrayOf(PropTypes.number),
     paginationType: PropTypes.oneOf(['normal', 'stepped']),
     rowStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+    footerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
     search: PropTypes.bool,
     searchText: PropTypes.string,
     toolbarButtonAlignment: PropTypes.oneOf(['left', 'right']),
