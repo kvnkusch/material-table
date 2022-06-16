@@ -3,7 +3,6 @@ import Table from '@material-ui/core/Table';
 import TableFooter from '@material-ui/core/TableFooter';
 import TableRow from '@material-ui/core/TableRow';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import DoubleScrollbar from "react-double-scrollbar";
 import * as React from 'react';
 import { MTablePagination, MTableSteppedPagination } from './components';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
@@ -679,19 +678,10 @@ export default class MaterialTable extends React.Component {
   }
 }
 
-const ScrollBar = ({ double, children }) => {
-  if (double) {
-    return (
-      <DoubleScrollbar>
-        {children}
-      </DoubleScrollbar>
-    );
-  }
-  else {
-    return (
-      <div style={{ overflowX: 'auto' }}>
-        {children}
-      </div>
-    );
-  }
+const ScrollBar = ({ children }) => {
+  return (
+    <div style={{ overflowX: 'auto' }}>
+      {children}
+    </div>
+  );
 };
